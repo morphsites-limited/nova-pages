@@ -2,6 +2,7 @@
 
 namespace Dewsign\NovaPages\Policies;
 
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
@@ -44,7 +45,7 @@ class PagePolicy
         return $user->can('managePage', $model);
     }
 
-    public function viewInactive($user = null, $page)
+    public function viewInactive(?Authenticatable $user, $page)
     {
         if (config('maxfactor-support.canViewInactive')) {
             return true;
@@ -61,7 +62,7 @@ class PagePolicy
         return false;
     }
 
-    public function accessContent($user = null, $page)
+    public function accessContent(?Authenticatable $user, $page)
     {
         $page = $this->getFirstPageWithAccessRoles($page);
 
