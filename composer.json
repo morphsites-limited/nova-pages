@@ -12,15 +12,15 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.0.0",
-        "laravel/framework": ">=5.0.0",
-        "maxfactor/support": "^2.0.0",
+        "php": "^7.0 || ^8.0",
+        "laravel/framework": "^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 ",
+        "maxfactor/support": "dev-master",
         "benjaminhirsch/nova-slug-field": "^1.0",
-        "dewsign/nova-repeater-blocks": "^1.2.0",
+        "dewsign/nova-repeater-blocks": "dev-master",
         "epartment/nova-dependency-container": "^1.1",
         "silvanite/brandenburg": "^1.0",
         "silvanite/novatoolpermissions": "^1.1",
-        "rinvex/countries": "^6.1"
+        "rinvex/countries": "^8.1"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": ">=3.1"
@@ -37,5 +37,15 @@
                 "Dewsign\\NovaPages\\Providers\\AuthServiceProvider"
             ]
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/nickfairchild/dewsign-maxfactor-laravel-support.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/nickfairchild/dewsign-nova-repeater-blocks.git"
+        }
+    ]
 }
