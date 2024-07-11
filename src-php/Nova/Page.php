@@ -129,7 +129,7 @@ class Page extends Resource
         }
 
         return $this->merge([
-            config('novapages.videos.field')::make('Video')->disk(config('novapages.videos.disk', 'public')),
+            config('novapages.videos.field')::make('Video'),//->disk(config('novapages.videos.disk', 'public')),
         ]);
     }
 
